@@ -20,6 +20,8 @@ The final flow looks like this:
 1. This triggers `mount-shares-on-boot-init.sh` run by `monkey` which connects via SSH to the Raspberry Pi as user `nas` and...
 1. ...runs `mount-shares-on-boot.sh` on the Raspberry Pi which connects to the NAS and mounts the encrypted shares.
 
+Note that you have to adapt the scripts to your needs, i.e. user/path names, IP addresses, share names, and passwords.
+
 ## Preparation on Raspberry Pi
 
 1. Create a user `nas`: `sudo useradd -m nas`
