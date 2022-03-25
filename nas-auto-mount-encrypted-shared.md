@@ -1,7 +1,5 @@
 # Synology NAS: Automatic Mounting of Encrypted Shares
 
-[toc]
-
 My Synology NAS supports encrypted folders. Using this security feature implies that the encrypted folders need to be mounted with the respective encryption password after startup. This can be tedious. Synology supports automatic mounting of encrypted shares using their Key Manager. However, I don't see a big benefit of the encrypted shares then, e.g. in case of theft.
 
 Below is my custom solution for using encrypted shares which are automatically mounted on startup without leaving the keys on the same device.
