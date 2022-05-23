@@ -9,7 +9,7 @@ It was quite annoying to debug this as I first did not realize that the malfunct
 
 So here's what finally worked for me:
 
-1) Look up the model/language code for your specific device in the Service Manual, e. g. on (manualslib.com)[https://www.manualslib.com/manual/1582425/Brother-Dcp-7090.html#product-MFC-L2750DW]. I found the codes for my device in a chapter named *Configure for country/region and model (Function code 74)*. Ensure that you look up the language code for the correct model. In my case it was `0404`, where the first two digits belong to the model and the last two digits to the language (English UK).
+1) Look up the model/language code for your specific device in the Service Manual, e. g. on [manualslib.com](https://www.manualslib.com/manual/1582425/Brother-Dcp-7090.html#product-MFC-L2750DW). I found the codes for my device in a chapter named *Configure for country/region and model (Function code 74)*. Ensure that you look up the language code for the correct model. In my case it was `0404`, where the first two digits belong to the model and the last two digits to the language (English UK).
 1) Switch on the device.
 1) Hold the home button for several seconds. 4 lines should appear, of which the last two are empty.
 1) Click on the last row.
