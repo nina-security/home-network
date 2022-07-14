@@ -62,12 +62,13 @@ mount_encrypted_shares
 
 ## Preparation on Synology NAS
 
-1. In home directory of `monkey` (`/var/services/homes/monkey`), create the file `mount-shares-on-boot-init.sh` (see content below).
+1. In the home directory of `monkey` (`/var/services/homes/monkey`), create the file `mount-shares-on-boot-init.sh` (see content below).
 1. Set file permissions: `chmod 700 mount-shares-on-boot-init.sh`.
 1. Create a SSH key pair: `ssh-keygen`
 1. Add the SSH public key on the Raspberry Pi to the authorized keys file `/home/nas/.ssh/authorized_keys`. Remember to also add the public key to the NAS (see steps above for Raspberry Pi).
 1. To run the script on startup, create the file `/usr/local/etc/rc.d/run-mount-shares-on-boot-init.sh` (see content below).
 1. Make the file executable: `chmod +x /usr/local/etc/rc.d/run-mount-shares-on-boot-init.sh`.
+1. To run the file `/usr/syno/sbin/synoshare` with `sudo` without having to enter a password for `monkey`, we need to add a rule to the sudoers file. Execute `sudo vi /etc/sudoers` and add the following line at the end of the file: `monkey ALL= NOPASSWD:/usr/syno/sbin/synoshare`. **Important: I experienced that this file was reset when updating the NAS. So if the auto mounting setup is not working anymore after an update, check the sudoers file first.**
 
 ### File mount-shares-on-boot-init.sh
 
